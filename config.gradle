@@ -1,0 +1,173 @@
+ext {
+	android = [compileSdkVersion: 29,
+	           buildToolsVersion: "29.0.3",
+	           minSdkVersion    : 21,
+	           targetSdkVersion : 29,]
+
+	androidxCoreVersion = "1.6.0"
+	supportVersion = "28.0.0"
+	retrofitVersion = "2.9.0"
+	okHttpVersion = "3.12.3"
+	glideVersion = "4.12.0"
+	rxJavaVersion = "2.2.19"
+	appcompatVersion = "1.3.0"
+	recyclerviewVersion = "1.2.1"
+	kotlinVersion = "1.5.21"
+	booster_version = "3.1.0"
+	koinVersion = "2.0.1"
+	lifeVersion = "2.3.1"
+	annotationVersion = "1.2.0"
+	stethoVersion = "1.6.0"
+	okioVersion = "2.2.2"
+	transitionVersion = "1.3.0"
+	exifinterfaceVersion = "1.1.0"
+	brvahVersion = "2.9.30"
+	dokitVersion = "3.4.0-alpha04"
+	cameraxVersion = "1.1.0-alpha05"
+	cameraxExtensionsVersion = "1.0.0-alpha25"
+	rxAndroidVersion = "2.1.1"
+	boosterVersion = "3.1.0"
+	timberVersion = "4.7.1"
+	navVersion = "2.3.5"
+	coordinatorlayoutVersion = "1.1.0"
+
+	dependencies = [androidxcore                 : "androidx.core:core:$androidxCoreVersion",
+	                androidxcorektx              : "androidx.core:core-ktx:$androidxCoreVersion",
+	                appcompatx                   : "androidx.appcompat:appcompat:$appcompatVersion",
+	                recyclerviewx                : "androidx.recyclerview:recyclerview:$recyclerviewVersion",
+	                lifecycle_viewmodel_ktx      : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeVersion",
+	                lifecycle_extensions         : "androidx.lifecycle:lifecycle-extensions:$lifeVersion",
+	                livedata_ktx                 : "androidx.lifecycle:lifecycle-livedata-ktx:$lifeVersion",
+	                fragment_navigation_ktx      : "androidx.navigation:navigation-fragment-ktx:$navVersion",
+	                fragment_navigation_ui_ktx   : "androidx.navigation:navigation-ui-ktx:$navVersion",
+	                smooth_navigation            : "com.kunminx.arch:smooth-navigation:3.9.0-beta1",
+	                unpeek_livedata              : "com.kunminx.arch:unpeek-livedata:7.0.4-beta1",
+
+	                recyclerviewx_selection      : "androidx.recyclerview:recyclerview-selection:1.1.0",
+	                annotationx                  : "androidx.annotation:annotation:$annotationVersion",
+	                design                       : "com.google.android.material:material:1.3.0",
+	                viewpager2                   : "androidx.viewpager2:viewpager2:1.0.0",
+	                localbroadcastmanager        : "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0",
+
+	                android_camera_core          : "androidx.camera:camera-core:$cameraxVersion",
+	                android_camera_camera2       : "androidx.camera:camera-camera2:$cameraxVersion",
+	                android_camera_lifecycle     : "androidx.camera:camera-lifecycle:$cameraxVersion",
+	                android_camera_view          : "androidx.camera:camera-view:$cameraxExtensionsVersion",
+	                android_camera_extensions    : "androidx.camera:camera-extensions:$cameraxExtensionsVersion",
+
+	                cardview                     : "androidx.cardview:cardview:1.0.0",
+
+	                multidex                     : "androidx.multidex:multidex:2.0.0",
+
+	                getui                        : "com.getui:gtsdk:3.2.2.0",
+	                getui_core                   : "com.getui:gtc:3.1.2.0",
+
+	                //测试
+	                junit                        : "junit:junit:4.13",
+	                google_truth                 : "com.google.truth:truth:1.1.2",
+
+	                //覆盖率
+	                robolectric                  : "org.robolectric:robolectric:3.0-rc3",
+
+	                //七牛
+	                qiniu_android_sdk            : "com.qiniu:qiniu-android-sdk:7.3.15",
+	                //统计
+	                piwik                        : "org.piwik.sdk:piwik-sdk:1.0.2",
+	                //Walle 多渠道
+	                walle                        : "com.meituan.android.walle:library:1.1.5",
+	                //妙健康
+	                miaoplus                     : "cn.funtalk.miao.miaoplus:miaoplus:1.3.41-SNAPSHOT",
+	                //日期
+	                joda_time                    : "joda-time:joda-time:2.10.10",
+	                //glide
+	                glide                        : "com.github.bumptech.glide:glide:$glideVersion",
+	                glide_compiler               : "com.github.bumptech.glide:compiler:$glideVersion",
+	                glide_okhttp3_integration    : "com.github.bumptech.glide:okhttp3-integration:$glideVersion",
+	                //json
+	                gson                         : "com.google.code.gson:gson:2.8.5",
+	                // Gson 解析容错：https://github.com/getActivity/GsonFactory
+	                gson_factory                 : "com.github.getActivity:GsonFactory:5.2",
+	                customactivityoncrash        : "cat.ereza:customactivityoncrash:2.3.0",
+
+	                arouter                      : "com.alibaba:arouter-api:1.5.2",
+	                arouter_compiler             : "com.alibaba:arouter-compiler:1.5.2",
+
+	                //rxjava2
+	                rxjava2                      : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+	                rxandroid2                   : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+	                //圆形
+	                circleimageview              : "de.hdodenhof:circleimageview:3.0.0",
+
+	                //leakcanary
+	                leakcanary_android           : "com.squareup.leakcanary:leakcanary-android:2.7",
+	                dokit                        : "io.github.didi.dokit:dokitx:$dokitVersion",
+	                dokit_ft                     : "io.github.didi.dokit:dokitx-ft:$dokitVersion",
+	                dokit_no_op                  : "io.github.didi.dokit:dokitx-no-op:$dokitVersion",
+	                stetho                       : "com.facebook.stetho:stetho:$stethoVersion",
+	                stetho_urlconnection         : "com.facebook.stetho:stetho-urlconnection:$stethoVersion",
+	                autosize                     : "me.jessyan:autosize:1.1.2",
+	                growingio                    : "com.growingio.android:vds-android-agent:autotrack-2.8.20",
+	                constraintlayout             : "androidx.constraintlayout:constraintlayout:2.0.4",
+	                baserecyclerviewadapterhelper: "com.github.CymChad:BaseRecyclerViewAdapterHelper:$brvahVersion",
+	                pictureselector              : "io.github.lucksiege:pictureselector:v2.7.3-rc06",
+	                smartrefreshlayout           : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.2",
+	                kotlin                       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+	                kotlin_coroutines            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9",
+
+	                toastutils                   : "com.github.getActivity:ToastUtils:9.2",
+	                cardio                       : "io.card:android-sdk:5.5.1",
+	                logger                       : "com.orhanobut:logger:2.2.0",
+
+	                //retrofit
+	                retrofit                     : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+	                retrofit_converter_gson      : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+	                retrofit_adapter_rxjava2     : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+	                retrofiturlmanager           : "me.jessyan:retrofit-url-manager:1.4.0",
+
+	                //okhttp
+	                okhttp3                      : "com.squareup.okhttp3:okhttp:$okHttpVersion",
+	                okhttp3_logging_interceptor  : "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
+	                calendarview                 : "com.haibin:calendarview:3.6.2",
+	                eventbus                     : "org.greenrobot:eventbus:3.1.1",
+	                skeleton                     : "com.ethanhua:skeleton:1.1.2",
+	                shimmerlayout                : "io.supercharge:shimmerlayout:2.1.0",
+	                lighter                      : "me.samlss:lighter:1.0.3",
+	                wechat_sdk                   : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9",
+	                jsbridge                     : "com.github.lzyzsd:jsbridge:1.0.4",
+	                zxing                        : "com.google.zxing:core:3.3.3", //3.4.0 需要 API24 以上，否则会因为没有 Array#sort() 方法而报错
+	                compresshelper               : "com.github.nanchen2251:CompressHelper:1.0.5",
+	                android_gif_drawable         : "pl.droidsonroids.gif:android-gif-drawable:1.2.19",
+	                tablayout                    : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+	                banner                       : "com.youth.banner:banner:2.1.0",
+	                submitbutton                 : "com.chinnsenn.submitbutton:submitbutton:0.2.2",
+	                videocache                   : "com.danikula:videocache:2.7.1",
+	                xupdate                      : "com.github.xuexiangjys:XUpdate:2.0.4",
+	                okhttpUtil                   : "com.zhy:okhttputils:2.6.2",
+
+	                umsdk_common                 : "com.umeng.umsdk:common:9.4.0",
+	                umsdk_asms                   : "com.umeng.umsdk:asms:1.2.3",
+	                //可选集成，对应产品中稳定性模块（错误捕获），该功能已经独立成为新的应用性能监控产品U-APM
+	                umsdk_apm                    : "com.umeng.umsdk:apm:1.4.0",
+
+	                koin_android                 : "org.koin:koin-android:$koinVersion",
+	                koin_androidx_scope          : "org.koin:koin-androidx-scope:$koinVersion",
+	                koin_androidx_viewmodel      : "org.koin:koin-androidx-viewmodel:$koinVersion",
+	                //和缓医生
+	                hh_doctor                    : "com.hhmedic.android.sdk:hh_trtc:3.0.8.01061149",
+	                //水印
+	                androidwm                    : "com.huangyz0918:androidwm-light:0.1.2",
+
+	                scanner_core                 : "com.shouzhong:Scanner:1.1.3",
+	                scanner_bank_card            : "com.shouzhong:ScannerBankCardLib:1.0.3",
+	                scanner_id_card              : "com.shouzhong:ScannerIdCardLib:1.0.4",
+
+	                commons_codec                : "commons-codec:commons-codec:1.15",
+	                qiyukf                       : "com.qiyukf.unicorn:unicorn:6.5.0",
+	                growingio_track              : "com.growingio.android:vds-android-agent:track-2.9.0",
+	                permissionx                  : "com.permissionx.guolindev:permissionx:1.4.0",
+	                timber                       : "com.jakewharton.timber:timber:$timberVersion",
+	                verticalbannerview           : "com.github.yodanote:verticalbannerview:1.0",
+	                basepopup                    : "io.github.razerdp:BasePopup:3.1.7"
+
+	]
+}
