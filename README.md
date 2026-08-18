@@ -1,3 +1,5 @@
+
+
 # 如何强制 Gradle 统一远程依赖库版本
 
 在 Android 开发中免不了需要通过 Gradle 进行远程依赖官方库或者第三方 SDK，相信大家遇到过这样一个痛点，这个远程依赖本身也依赖了其他第三方库，而工程可能因为兼容性考虑，需要的的不是这个版本，以下举例一个场景：
@@ -53,7 +55,7 @@ subprojects {
 		resolutionStrategy.eachDependency { DependencyResolveDetails details ->
 			def requested = details.requested
 			if (requested.group == 'com.squareup.okhttp3') {
-				if (requested.module.name == 'okhttp3') {
+				if (requested.module.name == 'okhttp') {
 					details.useVersion '3.12.3'
 				}
 			}
